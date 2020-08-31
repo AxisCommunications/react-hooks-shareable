@@ -1,0 +1,27 @@
+# Logs
+*.log
+# Coverage directory (tests with coverage)
+coverage/
+# Source
+src/
+sbin
+tsconfig.json
+.github
+.vscode
+.editorconfig
+.env
+.eslintrc.yaml
+.gitattributes
+.pnp.js
+
+.DS_Store
+.eslintcache
+*.tsbuildinfo
+
+# Dependencies
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

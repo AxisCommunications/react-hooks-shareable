@@ -1,0 +1,18 @@
+# Logs
+*.log
+# Coverage directory (tests with coverage)
+coverage/
+# Bundles
+dist/
+
+.DS_Store
+.eslintcache
+*.tsbuildinfo
+
+# Dependencies
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
