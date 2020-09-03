@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "declaration": true,
+    "isolatedModules": false,
+    "noEmit": true,
+    "outDir": "./dist",
+    "incremental": true,
+    "noImplicitAny": true,
+    "plugins": [{ "name": "typescript-styled-plugin" }]
+  },
+  "include": ["./types/*.d.ts", "./src/index.ts", "./src/*.test.ts"]
+}

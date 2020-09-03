@@ -1,0 +1,70 @@
+{
+  "name": "react-hooks-shareable",
+  "version": "1.0.0",
+  "description": "A list of useful React hooks that can be reused across different projects",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxisCommunications/react-hooks-shareable.git"
+  },
+  "homepage": "https://github.com/AxisCommunications/react-hooks-shareable",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.11.0",
+    "yarn": ">=1.12.3"
+  },
+  "scripts": {
+    "lint": "yarn tsc && yarn lint:ts && yarn prettier:check",
+    "lint:fix": "yarn lint:ts --fix && yarn prettier:fix",
+    "lint:ts": "eslint --ext '.ts,.tsx' . --cache",
+    "test": "jest",
+    "prettier:check": "prettier --check '{**/*.{js,ts,jsx,tsx,md},.gitlab-ci.yml,README.md,tsconfig.json,package.json}'",
+    "prettier:fix": "prettier --write '{**/*.{js,ts,jsx,tsx,md},.gitlab-ci.yml,README.md,tsconfig.json,package.json}' --fix --loglevel silent",
+    "build": "yarn tsc --emitDeclarationOnly --noEmit false && webpack --config webpack.config.js",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "release": "yarn version apply && bash sbin/release.sh"
+  },
+  "dependencies": {
+    "@juggle/resize-observer": "3.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.4",
+    "@babel/plugin-proposal-class-properties": "7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.11.0",
+    "@babel/preset-env": "7.11.0",
+    "@babel/preset-react": "7.10.4",
+    "@babel/preset-typescript": "7.10.4",
+    "@jest/globals": "26.4.2",
+    "@testing-library/react-hooks": "3.4.1",
+    "@types/gtag.js": "0.0.3",
+    "@types/react": "16.9.48",
+    "@types/testing-library__react-hooks": "3.4.0",
+    "@typescript-eslint/eslint-plugin": "3.10.1",
+    "@typescript-eslint/parser": "3.10.1",
+    "babel-loader": "8.1.0",
+    "eslint": "7.7.0",
+    "eslint-config-typescript-shareable": "0.12.0",
+    "eslint-import-resolver-node": "0.3.4",
+    "eslint-plugin-functional": "3.0.2",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-react": "7.20.6",
+    "eslint-plugin-react-hooks": "4.1.0",
+    "jest": "26.4.2",
+    "prettier": "2.1.1",
+    "react": "16.13.1",
+    "react-test-renderer": "16.13.1",
+    "typescript": "4.0.2",
+    "webpack": "5.0.0-beta.29",
+    "webpack-cli": "3.3.12"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
+  },
+  "resolutions": {
+    "dot-prop": "5.2.0"
+  }
+}
