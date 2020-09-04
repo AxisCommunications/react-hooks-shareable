@@ -26,16 +26,20 @@ Note: You will still need to set up Google Analytics in your project manually, I
 import { useEffect, useCallback } from 'react'
 import { useAnalytics } from 'react-hooks-shareable'
 import { Button } from 'someComponentLibrary'
+
 const GoogleID = 'UA-00000000'
+
 const MyComponent = () => {
   const { pageView, event } = useAnalytics(GoogleID)
+
   useEffect(() => {
     pageView({ page_path: '/myPage' })
   }, [pageView])
+
   const onClick = useCallback(() => {
     // A simple event
     event('Create', {
-      event_category: 'Policies',
+      event_category: 'EventCategory',
       event_label: 'Success',
       value: 10,
     })
@@ -45,7 +49,8 @@ const MyComponent = () => {
       fatal: true, // set to true if the error is fatal
     })
   }, [event])
-  return <Button variant="primary" label="Click me" onClick={onClick} />
+
+  return <Button label="Click me" onClick={onClick} />
 }
 ```
 
@@ -63,8 +68,10 @@ const [currentValue, setTrue, setFalse, toggleValue] = useBoolean(initialValue)
 ```tsx
 import { useBoolean } from 'react-hooks-shareable'
 import { ConfirmDialog } from 'someComponentLibrary'
+
 const MyComponent = () => {
   const [isOpen, open, close, toggle] = useBoolean(false)
+
   return (
     <ConfirmDialog
       open={isOpen}
@@ -73,11 +80,11 @@ const MyComponent = () => {
       message="Are you sure?"
       confirmAction={{
         label: 'OK',
-        onClick: () => {},
+        onClick: close,
       }}
       cancelAction={{
         label: 'Cancel',
-        onClick: () => {},
+        onClick: close,
       }}
     />
   )
@@ -101,21 +108,23 @@ delay - 100ms
 minDuration - 400ms
 
 ```tsx
-  import { useDeferredTrigger } from 'react-hooks-shareable'
-  const MyComponent = () => {
-    const initializing =
-      mdsClient === undefined || credentials === undefined || online === undefined
-    const waiting = useDeferredTrigger(initializing, {
-      delay: 200,
-      minDuration: 500,
-    })
-    if (waiting) {
-      return <Spinner>
-    }
-    return (
-      <YourComponent />
-    )
+import { useDeferredTrigger } from 'react-hooks-shareable'
+
+const MyComponent = () => {
+  const initializing =
+    gqlClient === undefined || credentials === undefined || online === undefined
+
+  const waiting = useDeferredTrigger(initializing, {
+    delay: 200,
+    minDuration: 500,
+  })
+
+  if (waiting) {
+    return <Spinner>
   }
+
+  return <YourComponent />
+}
 ```
 
 </details>
@@ -127,8 +136,10 @@ A hook that provides a translation vector for an element that is being dragged.
 
 ```tsx
 import { useDraggable } from 'react-hooks-shareable'
+
 const MyComponent = () => {
   const [[tx], onDragStart, dragging] = useDraggable(onDragEnd)
+
   return (
     <ResizeContainer left={tx}>
       <ResizeHandle onPointerDown={onDragStart} />
@@ -147,9 +158,11 @@ A hook that returns a unique id.
 
 ```tsx
 import { useId } from 'react-hooks-shareable'
+
 const MyComponent = () => {
   const id = useId('someId')
-  return <MyComponent id={id} />
+
+  return <YourComponent id={id} />
 }
 ```
 
@@ -161,10 +174,12 @@ const MyComponent = () => {
 A hook for delaying the execution.
 
 ```tsx
-import { useId } from 'react-hooks-shareable'
+import { useInterval } from 'react-hooks-shareable'
+
 const MyComponent = () => {
   useInterval(() => console.log('Run'), 100)
-  return <MyComponent />
+
+  return <YourComponent />
 }
 ```
 
@@ -178,12 +193,15 @@ A hook for accessing from or saving the values to localStorage.
 ```tsx
 import { useLocalStorage, getLocalStorage } from 'react-hooks-shareable'
 import { Switch } from 'someComponentLibrary'
+
 // Without hook
 const storage = getLocalStorage()
 const theme: ITheme | null = storage['theme']
+
 // With hook
 const MyComponent = () => {
   const [analytics, setAnalytics] = useLocalStorage<boolean | null>('analytics')
+
   return (
     <Switch
       label={t('label.shareData')}
@@ -203,15 +221,18 @@ A hook for easy detecting if the component is pressed.
 
 ```tsx
 import { usePressed } from 'react-hooks-shareable'
+
 const MyComponent = () => {
   const ref = React.createRef<HTMLInputElement>()
   const pressed = usePressed(ref)
+
   useEffect(() => {
     if (pressed) {
       document.addEventListener('pointermove', posSetter)
       return () => document.removeEventListener('pointermove', posSetter)
     }
   }, [posSetter, pressed])
+
   return <YourComponent />
 }
 ```
@@ -225,10 +246,13 @@ A hook for easy resetting the scroll to top of ref.
 
 ```tsx
 import { useResetScroll } from 'react-hooks-shareable'
+
 const MyComponent = () => {
   const tableContentRef = useRef<HTMLDivElement>(null)
+
   // Scroll to top when scrollKey changes
   useResetScroll(tableContentRef)
+
   return <TableContainer ref={tableRef} />
 }
 ```
@@ -244,8 +268,10 @@ To signal that the onScroll function hasn't computed any position yet, atTop and
 
 ```tsx
 import { useScrollPosition } from 'react-hooks-shareable'
+
 const MyComponent = () => {
   const { atTop, atBottom, scrollRef } = useScrollPosition()
+
   return (
     <ScrollContainer
       topHidden={atTop === false}
@@ -268,8 +294,10 @@ A hook to keep track of the selected items.
 ```tsx
 import { useSelection } from 'react-hooks-shareable'
 import { Table, TableHeader, Typography, Menu } from 'someComponentLibrary'
+
 const MyComponent = () => {
   const [selection, add, remove, reset] = useSelection()
+
   const onSelect = useCallback(
     (selected: boolean, id?: string) => {
       if (selected) {
@@ -288,15 +316,9 @@ const MyComponent = () => {
     },
     [add, remove, reset]
   )
+
   return (
-    <Table
-      initialWidths={initialWidths}
-      resizableColumns={true}
-      minColumnWidth={0}
-      maxHeight={6}
-      onSelect={onSelect}
-      hasMenu={true}
-    >
+    <Table onSelect={onSelect} hasMenu={true}>
       <TableHeader
         selected={
           selection.size !== 0 && selection.size === LONG_DEVICE_LIST.length
@@ -340,35 +362,40 @@ The event can, for example, be used to trigger changes to effects.
 
 The initial state of the event is undefined, otherwise nothing should be assumed of the event returns a triplet consisting of:
 
-0. an event 1. a function to trigger the event 2. a function to reset the event to its initial state
+0. an event
+1. a function to trigger the event
+2. a function to reset the event to its initial state
 
 ```tsx
 import { useCallback, useMemo } from 'react'
 import { useTrigger } from 'react-hooks-shareable'
+
 const MyComponent = () => {
-  const [clearFilterEvent, triggerClearFilterEvent] = useTrigger()
-  const tabs = useMemo<Tabs<Tab>>(
+  const [clearEvent, triggerClearEvent] = useTrigger()
+
+  const tabs = useMemo(
     () => [
       {
         id: 'myId',
         label: 'myLabel',
       },
     ],
-    [localSiteCount, mdsSiteCount, t, experimentalOrgSites]
+    []
   )
+
   const onTabSelected = useCallback(
     (tab: Tab) => {
-      triggerClearFilterEvent()
+      triggerClearEvent()
       setCurrentTab(tab)
     },
-    [triggerClearFilterEvent]
+    [triggerClearEvent]
   )
   return (
-    <MyComponent
+    <YourComponent
       tabs={tabs}
       onTabSelected={onTabSelected}
       selectedTab={currentTab}
-      clearFilterEvent={clearFilterEvent}
+      clearEvent={clearEvent}
     />
   )
 }
@@ -383,12 +410,14 @@ A hook for listening to activity on an element by the user.
 
 ```tsx
 import { useScrollPosition } from 'react-hooks-shareable'
+
 const MyComponent = () => {
   const ref = React.createRef<HTMLInputElement>()
   const [userActivity, startUserActive, stopUserActive] = useUserActive(
     ref,
     4000
   )
+
   return <YourComponent />
 }
 ```
@@ -402,6 +431,7 @@ A hook for easy handling of component's focus.
 
 ```tsx
 import { useVisibleFocus } from 'react-hooks-shareable'
+
 const MyComponent = () => {
   const {
     isPointerOn,
@@ -409,15 +439,16 @@ const MyComponent = () => {
     determineVisibleFocus,
     visibleFocus,
   } = useVisibleFocus()
+
   return (
-    <NativeButton
+    <Button
       onPointerDown={isPointerOn}
       onPointerUp={isPointerOff}
       onFocus={determineVisibleFocus}
       visibleFocus={visibleFocus}
     >
       Content
-    </NativeButton>
+    </Button>
   )
 }
 ```
