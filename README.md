@@ -152,6 +152,23 @@ const MyComponent = () => {
 </details>
 
 <details>
+  <summary>useFocusDetection</summary>
+
+A hook which detects if the browser and your page is in focus.
+
+```tsx
+import { useFocusDetection } from 'react-hooks-shareable'
+
+const MyComponent = () => {
+  const hasFocus = useFocusDetection(1000)
+
+  return <span>{`User ${hasFocus ? : 'is' : 'is not'} focusing on this page`}</span>
+}
+```
+
+</details>
+
+<details>
   <summary>useId</summary>
 
 A hook that returns a unique id.
