@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## v1.0.2 (2020-10-21 15:56:23 +0200)
+## v1.1.1 (2020-10-28 11:24:47 +0100)
+
+### Features
+
+  -  add useClickOutside hook
+  -  improve release script
+
+## v1.0.2 (2020-10-21 15:57:48 +0200)
 
 ### Features
 
