@@ -2,6 +2,7 @@ import { ResizeObserver } from '@juggle/resize-observer'
 
 export * from './useAnalytics'
 export * from './useBoolean'
+export * from './useClickOutside'
 export * from './useDeferredTrigger'
 export * from './useDraggable'
 export * from './useFocusDetection'
