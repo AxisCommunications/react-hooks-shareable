@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { PointerEventHandler, useRef, useEffect } from 'react'
 
 type Callback = (e: PointerEvent) => void
 
@@ -27,10 +27,10 @@ type Callback = (e: PointerEvent) => void
  * }
  * ```
  */
-export const useClickOutside = (callback: Callback): Callback => {
+export const useClickOutside = (callback: Callback): PointerEventHandler => {
   const inside = useRef(false)
 
-  const handleClick: Callback = () => {
+  const handleClick: PointerEventHandler = () => {
     inside.current = true
   }
 
