@@ -152,6 +152,33 @@ const MyComponent = () => {
 </details>
 
 <details>
+  <summary>useClickOutside</summary>
+
+A hook that fires a callback when a click (pointerdown) was registered outside of a component. Outside is defined as outside of your react tree, which means that this works with portals.
+
+```tsx
+import { useDraggable } from 'react-hooks-shareable'
+
+const MyComponent = () => {
+  const handler = useClickOutside(e => {
+    console.log('Clicked outside!')
+  })
+
+  return (
+    <div onPointerDown={handler}>
+      <span>Clicks here is inside</span>
+      {ReactDOM.createPortal(
+        <span>Clicks here are also inside</span>,
+        portalContainer
+      )}
+    </div>
+  )
+}
+```
+
+</details>
+
+<details>
   <summary>useFocusDetection</summary>
 
 A hook which detects if the browser and your page is in focus.
