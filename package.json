@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-shareable",
-  "version": "1.2.1",
+  "version": "1.3.1",
   "description": "A list of useful React hooks that can be reused across different projects",
   "main": "dist/index.js",
   "files": [

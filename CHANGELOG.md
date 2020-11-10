@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.3.1 (2020-11-10 08:53:38 +0100)
+
+### Features
+
+  -  updates dependencies to latest versions
+
 ## v1.2.1 (2020-11-03 08:48:39 +0100)
 
 ### Features
