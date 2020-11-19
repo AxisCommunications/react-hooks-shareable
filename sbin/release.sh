@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 
-# Generate new commit
-if [[ ! -d .yarn/version ]]; then
-  yarn version patch
+if [[ ! -d .yarn/versions ]]; then
+  # Update pach number if no versions to be applied
+  yarn version patch --deferred
 fi
-yarn version apply --all
-VERSION=$(jq -r .version package.json)
-git add -u
-git commit -m "v$VERSION"
-git tag "v$VERSION"
 
-# Update changelog (requires tag)
-bash sbin/changelog.sh > CHANGELOG.md && git add CHANGELOG.md
-git tag -d "v$VERSION"
-git commit --amend --no-edit
-git tag -a -m "v$VERSION" "v$VERSION"
+# Apply all deferred version upgrades
+yarn version apply --all
+
+# Update changelog and commit new version
+NEW_VERSION="v$(jq -r .version package.json)"
+bash sbin/changelog.sh -u ${NEW_VERSION}
+git add -u
+git commit -m ${NEW_VERSION}
+git tag -a -m ${NEW_VERSION} ${NEW_VERSION}
