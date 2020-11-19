@@ -1,38 +1,43 @@
 # Changelog
-
 All notable changes to this project will be documented in this file.
+## v1.4.0 (2020-11-19 09:09:27 +0100)
+
+### Features
+
+  - updates dependencies to latest versions
 
 ## v1.3.1 (2020-11-10 08:53:38 +0100)
 
 ### Features
 
-  -  updates dependencies to latest versions
+  - updates dependencies to latest versions
 
 ## v1.2.1 (2020-11-03 08:48:39 +0100)
 
 ### Features
 
-  -  updates dependencies to latest versions
+  - updates dependencies to latest versions
 
 ### Bug fixes
 
-  -  correct types for useClickOutside
+  - correct types for useClickOutside
 
 ## v1.1.1 (2020-10-28 11:24:47 +0100)
 
 ### Features
 
-  -  add useClickOutside hook
-  -  improve release script
+  - add useClickOutside hook
+  - improve release script
 
 ## v1.0.2 (2020-10-21 15:57:48 +0200)
 
 ### Features
 
-  -  useFocusDetection
+  - useFocusDetection
 
 ## v1.0.1 (2020-09-03 09:30:23 +0200)
 
 ### Bug fixes
 
-  -  build the code before release
+  - build the code before release
+
