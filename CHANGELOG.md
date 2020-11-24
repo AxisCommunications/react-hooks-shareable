@@ -1,9 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## v1.4.0 (2020-11-19 09:09:27 +0100)
+## v1.6.0 (2020-11-24 09:55:24 +0100)
+
+## v1.4.0 (2020-11-19 09:10:27 +0100)
 
 ### Features
 
+  - update release and changelog scripts
   - updates dependencies to latest versions
 
 ## v1.3.1 (2020-11-10 08:53:38 +0100)
