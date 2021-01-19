@@ -1,64 +1,82 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## v1.9.0 (2021-01-12 09:52:36 +0100)
-
-## v1.8.0 (2020-12-17 11:14:00 +0100)
+## [v1.10.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.9.0...v1.10.0) (2021-01-19 09:56:37 +0100)
 
 ### Features
 
-  - update release and changelog scripts
+  - updates dependencies to latest versions ([1a21a00](https://github.com/AxisCommunications/media-stream-player-js/commit/1a21a000caa563cba33b9447b7b10be482991905))
 
-## v1.7.0 (2020-12-09 12:43:59 +0100)
-
-### Features
-
-  - update release and changelog scripts
-
-## v1.6.0 (2020-11-24 09:55:46 +0100)
+## [v1.9.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.8.0...v1.9.0) (2021-01-12 09:53:02 +0100)
 
 ### Features
 
-  - update release and changelog scripts
+  - updates dependencies to latest versions ([de6f397](https://github.com/AxisCommunications/media-stream-player-js/commit/de6f397a91b10d0ce849ab0822bcf183b9556a8c))
 
-## v1.4.0 (2020-11-19 09:10:27 +0100)
-
-### Features
-
-  - update release and changelog scripts
-  - updates dependencies to latest versions
-
-## v1.3.1 (2020-11-10 08:53:38 +0100)
+## [v1.8.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.7.0...v1.8.0) (2020-12-17 11:14:00 +0100)
 
 ### Features
 
-  - updates dependencies to latest versions
+  - update release and changelog scripts ([2dd35b1](https://github.com/AxisCommunications/media-stream-player-js/commit/2dd35b1f0b394d1d34c962f651ad53d2f3606c3d))
 
-## v1.2.1 (2020-11-03 08:48:39 +0100)
+## [v1.7.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.6.0...v1.7.0) (2020-12-09 12:43:59 +0100)
 
 ### Features
 
-  - updates dependencies to latest versions
+  - update release and changelog scripts ([2706e06](https://github.com/AxisCommunications/media-stream-player-js/commit/2706e0633a80b862e260563ca517b958908da247))
+
+## [v1.6.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.4.0...v1.6.0) (2020-11-24 09:55:46 +0100)
+
+### Features
+
+  - update release and changelog scripts ([ce6b1a8](https://github.com/AxisCommunications/media-stream-player-js/commit/ce6b1a86621607e58ee985b5a96b0621529c802d))
+
+## [v1.4.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.3.1...v1.4.0) (2020-11-19 09:10:27 +0100)
+
+### Features
+
+  - update release and changelog scripts ([11b177c](https://github.com/AxisCommunications/media-stream-player-js/commit/11b177c957e3c4139af6d0be0ac4cacaa7486ff4))
+  - updates dependencies to latest versions ([0e87164](https://github.com/AxisCommunications/media-stream-player-js/commit/0e871641bba5b23ee5880caf6dd5812c5a3b3ee2))
+
+## [v1.3.1](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.2.1...v1.3.1) (2020-11-10 08:53:38 +0100)
+
+### Features
+
+  - updates dependencies to latest versions ([b855d71](https://github.com/AxisCommunications/media-stream-player-js/commit/b855d7191f365ead82a2bf89870123c9f1b4b3d6))
+
+## [v1.2.1](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.1.1...v1.2.1) (2020-11-03 08:48:39 +0100)
+
+### Documentation
+
+  - document useClickOutside ([04c7ff2](https://github.com/AxisCommunications/media-stream-player-js/commit/04c7ff23298e67188a14df285475567551db3881))
+
+### Features
+
+  - updates dependencies to latest versions ([18bd7b7](https://github.com/AxisCommunications/media-stream-player-js/commit/18bd7b7c9939d604fd50ec60a8c3852a960f4330))
 
 ### Bug fixes
 
-  - correct types for useClickOutside
+  - correct types for useClickOutside ([da1d69c](https://github.com/AxisCommunications/media-stream-player-js/commit/da1d69cff565fc3c628eb6788304d1566b3de30d))
 
-## v1.1.1 (2020-10-28 11:24:47 +0100)
-
-### Features
-
-  - add useClickOutside hook
-  - improve release script
-
-## v1.0.2 (2020-10-21 15:57:48 +0200)
+## [v1.1.1](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.0.2...v1.1.1) (2020-10-28 11:24:47 +0100)
 
 ### Features
 
-  - useFocusDetection
+  - add useClickOutside hook ([a1bae9f](https://github.com/AxisCommunications/media-stream-player-js/commit/a1bae9feeb0cff0b2b36a4026090ef552a388271))
+  - improve release script ([19f2439](https://github.com/AxisCommunications/media-stream-player-js/commit/19f243983518046f5b0e26c0a6447025328efb59))
 
-## v1.0.1 (2020-09-03 09:30:23 +0200)
+## [v1.0.2](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.0.1...v1.0.2) (2020-10-21 15:57:48 +0200)
+
+### Documentation
+
+  - documentation cleanup ([a8094e7](https://github.com/AxisCommunications/media-stream-player-js/commit/a8094e7f1fb32ed464ec50cd41cd02c6566d692b))
+
+### Features
+
+  - useFocusDetection ([ab0a742](https://github.com/AxisCommunications/media-stream-player-js/commit/ab0a742fca6912e9a0ce844f46ca84b1a493a678))
+
+## [v1.0.1](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.0.0...v1.0.1) (2020-09-03 09:30:23 +0200)
 
 ### Bug fixes
 
-  - build the code before release
+  - build the code before release ([3a32732](https://github.com/AxisCommunications/media-stream-player-js/commit/3a327320a032bcfda9197164e427bb6efe03d202))
 
