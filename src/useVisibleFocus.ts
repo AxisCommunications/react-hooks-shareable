@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react'
-import { useBoolean } from '.'
+import { useBoolean } from './useBoolean'
 
 export const useVisibleFocus = (): {
   readonly isPointerOn: VoidFunction
