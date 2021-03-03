@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [v1.18.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.17.0...v1.18.0) (2021-03-03 09:04:02 +0100)
+## [v1.19.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.18.0...v1.19.0) (2021-03-03 13:24:35 +0100)
+
+### Features
+
+  - add useHasOverflow hook ([db4a2f8](https://github.com/AxisCommunications/media-stream-player-js/commit/db4a2f812ff4f2a36d96b4d5d776afe37fd3eaea))
+
+## [v1.18.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.17.0...v1.18.0) (2021-03-03 09:04:21 +0100)
 
 ### Features
 
