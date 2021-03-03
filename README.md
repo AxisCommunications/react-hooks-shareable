@@ -498,3 +498,21 @@ const MyComponent = () => {
 ```
 
 </details>
+
+<details>
+  <summary>useHasOverflow</summary>
+
+A hook for checking if an element has overflow.
+
+```tsx
+import { useHasOverflow } from 'react-hooks-shareable'
+import { SomeComponent } from 'someComponentLibrary'
+
+const MyComponent = () => {
+  const { hasOverflow, ref } = useHasOverflow()
+
+  return <SomeComponent ref={ref} hasOverflow={hasOverflow} />
+}
+```
+
+</details>
