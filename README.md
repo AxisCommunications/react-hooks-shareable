@@ -477,12 +477,8 @@ A hook for easy handling of component's focus.
 import { useVisibleFocus } from 'react-hooks-shareable'
 
 const MyComponent = () => {
-  const {
-    isPointerOn,
-    isPointerOff,
-    determineVisibleFocus,
-    visibleFocus,
-  } = useVisibleFocus()
+  const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+    useVisibleFocus()
 
   return (
     <Button
