@@ -9,10 +9,10 @@ dist/
 .eslintcache
 *.tsbuildinfo
 
-# Dependencies
+# yarn cache and packages for zero install
 .yarn/*
+!.yarn/cache
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
-.pnp.*

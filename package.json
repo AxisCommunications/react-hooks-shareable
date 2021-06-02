@@ -13,18 +13,17 @@
   "homepage": "https://github.com/AxisCommunications/react-hooks-shareable",
   "license": "MIT",
   "engines": {
-    "node": ">=10.11.0",
-    "yarn": ">=1.12.3"
+    "node": ">=14.16.1",
+    "yarn": ">=2.4.1"
   },
   "scripts": {
     "lint": "yarn tsc && yarn lint:ts && yarn prettier:check",
     "lint:fix": "yarn lint:ts --fix && yarn prettier:fix",
     "lint:ts": "eslint --ext '.ts,.tsx' . --cache",
     "test": "jest",
-    "prettier:check": "prettier --check '{**/*.{js,ts,jsx,tsx,md},.gitlab-ci.yml,README.md,tsconfig.json,package.json}'",
-    "prettier:fix": "prettier --write '{**/*.{js,ts,jsx,tsx,md},.gitlab-ci.yml,README.md,tsconfig.json,package.json}' --fix --loglevel silent",
+    "prettier:check": "prettier -c -u .",
+    "prettier:fix": "prettier -c -u -w .",
     "build": "yarn tsc --emitDeclarationOnly --noEmit false && webpack --config webpack.config.js",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "release": "yarn version apply && bash sbin/release.sh"
   },
   "dependencies": {
@@ -33,25 +32,25 @@
   "devDependencies": {
     "@babel/core": "7.14.3",
     "@babel/plugin-proposal-class-properties": "7.13.0",
-    "@babel/plugin-proposal-object-rest-spread": "7.14.2",
-    "@babel/preset-env": "7.14.2",
+    "@babel/plugin-proposal-object-rest-spread": "7.14.4",
+    "@babel/preset-env": "7.14.4",
     "@babel/preset-react": "7.13.13",
     "@babel/preset-typescript": "7.13.0",
     "@jest/globals": "26.6.2",
     "@testing-library/react-hooks": "7.0.0",
-    "@types/gtag.js": "0.0.4",
-    "@types/react": "17.0.6",
+    "@types/gtag.js": "0.0.5",
+    "@types/react": "17.0.9",
     "@types/testing-library__react-hooks": "4.0.0",
-    "@typescript-eslint/eslint-plugin": "4.25.0",
-    "@typescript-eslint/parser": "4.25.0",
+    "@typescript-eslint/eslint-plugin": "4.26.0",
+    "@typescript-eslint/parser": "4.26.0",
     "babel-loader": "8.2.2",
     "eslint": "7.27.0",
-    "eslint-config-typescript-shareable": "0.43.0",
+    "eslint-config-typescript-shareable": "1.0.0",
     "eslint-import-resolver-node": "0.3.4",
     "eslint-plugin-functional": "3.2.1",
-    "eslint-plugin-import": "2.23.3",
+    "eslint-plugin-import": "2.23.4",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-react": "7.23.2",
+    "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
     "jest": "26.6.3",
     "prettier": "2.3.0",
@@ -59,13 +58,10 @@
     "react-test-renderer": "17.0.2",
     "semver": "7.3.5",
     "typescript": "4.2.4",
-    "webpack": "5.37.1",
+    "webpack": "5.38.1",
     "webpack-cli": "4.7.0"
   },
   "peerDependencies": {
-    "react": "^17.0.1"
-  },
-  "resolutions": {
-    "dot-prop": "5.2.0"
+    "react": "^17.0.2"
   }
 }
