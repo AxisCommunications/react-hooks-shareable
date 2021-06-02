@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [v1.28.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.27.0...v1.28.0) (2021-06-02 11:03:39 +0200)
+## [v1.29.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.28.0...v1.29.0) (2021-06-02 14:14:43 +0200)
+
+### Maintenance
+
+  - revert `engines` field ([57b9be5](https://github.com/AxisCommunications/media-stream-player-js/commit/57b9be5c7a01c8aaaacce64d925ee7cb330f523e))
+
+## [v1.28.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.27.0...v1.28.0) (2021-06-02 11:04:15 +0200)
 
 ### Maintenance
 
