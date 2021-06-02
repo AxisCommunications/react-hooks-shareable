@@ -13,8 +13,8 @@
   "homepage": "https://github.com/AxisCommunications/react-hooks-shareable",
   "license": "MIT",
   "engines": {
-    "node": ">=14.16.1",
-    "yarn": ">=2.4.1"
+    "node": ">=10.11.0",
+    "yarn": ">=1.12.3"
   },
   "scripts": {
     "lint": "yarn tsc && yarn lint:ts && yarn prettier:check",
@@ -45,7 +45,7 @@
     "@typescript-eslint/parser": "4.26.0",
     "babel-loader": "8.2.2",
     "eslint": "7.27.0",
-    "eslint-config-typescript-shareable": "1.0.0",
+    "eslint-config-typescript-shareable": "1.1.0",
     "eslint-import-resolver-node": "0.3.4",
     "eslint-plugin-functional": "3.2.1",
     "eslint-plugin-import": "2.23.4",
