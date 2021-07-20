@@ -41,10 +41,10 @@
     "@types/gtag.js": "0.0.7",
     "@types/react": "17.0.14",
     "@types/testing-library__react-hooks": "4.0.0",
-    "@typescript-eslint/eslint-plugin": "4.28.3",
-    "@typescript-eslint/parser": "4.28.3",
+    "@typescript-eslint/eslint-plugin": "4.28.4",
+    "@typescript-eslint/parser": "4.28.4",
     "babel-loader": "8.2.2",
-    "eslint": "7.30.0",
+    "eslint": "7.31.0",
     "eslint-config-typescript-shareable": "1.2.0",
     "eslint-import-resolver-node": "0.3.4",
     "eslint-plugin-functional": "3.2.1",
@@ -58,7 +58,7 @@
     "react-test-renderer": "17.0.2",
     "semver": "7.3.5",
     "typescript": "4.3.5",
-    "webpack": "5.44.0",
+    "webpack": "5.45.1",
     "webpack-cli": "4.7.2"
   },
   "peerDependencies": {
