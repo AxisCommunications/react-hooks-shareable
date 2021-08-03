@@ -4,4 +4,4 @@ coverage
 CHANGELOG.md
 
 .yarn/
-.pnp.js
+.pnp.*
