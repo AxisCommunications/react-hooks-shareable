@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [v1.37.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.36.0...v1.37.0) (2021-08-10 09:17:17 +0200)
+## [v1.38.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.37.0...v1.38.0) (2021-08-17 08:48:00 +0200)
+
+### Maintenance
+
+  - updates dependencies to latest versions ([c15487e](https://github.com/AxisCommunications/media-stream-player-js/commit/c15487e47ec890c76812d060f5719c39bec88e43))
+
+## [v1.37.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.36.0...v1.37.0) (2021-08-10 09:17:41 +0200)
 
 ## [v1.36.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.35.0...v1.36.0) (2021-08-10 09:04:20 +0200)
 
