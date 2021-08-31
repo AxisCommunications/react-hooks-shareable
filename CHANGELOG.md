@@ -1,6 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [v1.39.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.38.0...v1.39.0) (2021-08-24 08:47:47 +0200)
+## [v1.40.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.39.0...v1.40.0) (2021-08-31 09:18:39 +0200)
+
+### Maintenance
+
+  - updates dependencies to latest versions ([44354a7](https://github.com/AxisCommunications/media-stream-player-js/commit/44354a703668c0e370fa10608b88a216a2fdafce))
+
+### Features
+
+  - check if element exists in useHasOverflowWithResizeEvent hook ([622d667](https://github.com/AxisCommunications/media-stream-player-js/commit/622d667eeab13ffbd13a35305db380deed87da2e))
+
+## [v1.39.0](https://github.com/AxisCommunications/media-stream-player-js/compare/v1.38.0...v1.39.0) (2021-08-24 08:48:29 +0200)
 
 ### Maintenance
 
