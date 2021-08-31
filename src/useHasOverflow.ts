@@ -43,6 +43,11 @@ export const useHasOverflowWithResizeEvent = <
     const observer = new window.ResizeObserver(([entry]) => {
       const el = entry.target
       const [descriptionElement] = el.children
+
+      if (descriptionElement === undefined) {
+        return
+      }
+
       const { clientHeight, scrollHeight } = descriptionElement
 
       setHasOverflow(clientHeight < scrollHeight)
