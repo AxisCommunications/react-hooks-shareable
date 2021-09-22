@@ -1,5 +1,10 @@
 import { createRef, useLayoutEffect, useState } from 'react'
 
+const hasElementOverflow = (elem: HTMLElement) => {
+  const { offsetWidth, offsetHeight, scrollWidth, scrollHeight } = elem
+  return offsetHeight < scrollHeight || offsetWidth < scrollWidth
+}
+
 /**
  * A hook that determines if an element has
  * overflow or not.
@@ -12,10 +17,7 @@ export const useHasOverflow = <T extends HTMLElement = HTMLDivElement>() => {
     if (ref.current === null) {
       return
     }
-    setHasOverflow(
-      ref.current.offsetHeight < ref.current.scrollHeight ||
-        ref.current.offsetWidth < ref.current.scrollWidth
-    )
+    setHasOverflow(hasElementOverflow(ref.current))
   }, [ref])
 
   return {
@@ -40,17 +42,11 @@ export const useHasOverflowWithResizeEvent = <
       return
     }
 
-    const observer = new window.ResizeObserver(([entry]) => {
-      const el = entry.target
-      const [descriptionElement] = el.children
-
-      if (descriptionElement === undefined) {
+    const observer = new window.ResizeObserver(() => {
+      if (ref.current === null) {
         return
       }
-
-      const { clientHeight, scrollHeight } = descriptionElement
-
-      setHasOverflow(clientHeight < scrollHeight)
+      setHasOverflow(hasElementOverflow(ref.current))
     })
 
     observer.observe(ref.current)
