@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [v1.47.0](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.46.0...v1.47.0) (2021-11-23 11:47:02 +0100)
+## [v1.48.0](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.47.0...v1.48.0) (2022-02-22 09:36:48 +0100)
+
+### Maintenance
+
+  - updates dependencies ([ff253f0](https://github.com/AxisCommunications/react-hooks-shareable/commit/ff253f0a629895f2bfe08022581a5e2e9452c80e))
+
+## [v1.47.0](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.46.0...v1.47.0) (2021-11-23 11:47:43 +0100)
 
 ### Maintenance
 
