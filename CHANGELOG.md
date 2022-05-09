@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [v1.50.0](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.49.0...v1.50.0) (2022-05-09 11:54:38 +0200)
+## [v1.50.1](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.50.0...v1.50.1) (2022-05-09 14:01:25 +0200)
+
+### Bug fixes
+
+  - correct types for useSynchronizedAnimation (#16) ([951208f](https://github.com/AxisCommunications/react-hooks-shareable/commit/951208f05825713c2bf74f5c4dba2bb04e1cac45))
+
+## [v1.50.0](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.49.0...v1.50.0) (2022-05-09 13:22:20 +0200)
 
 ### Maintenance
 
