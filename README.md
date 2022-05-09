@@ -94,6 +94,33 @@ const MyComponent = () => {
 </details>
 
 <details>
+  <summary>useClickOutside</summary>
+
+A hook that fires a callback when a click (pointerdown) was registered outside of a component. Outside is defined as outside of your react tree, which means that this works with portals.
+
+```tsx
+import { useDraggable } from 'react-hooks-shareable'
+
+const MyComponent = () => {
+  const handler = useClickOutside(e => {
+    console.log('Clicked outside!')
+  })
+
+  return (
+    <div onPointerDown={handler}>
+      <span>Clicks here is inside</span>
+      {ReactDOM.createPortal(
+        <span>Clicks here are also inside</span>,
+        portalContainer
+      )}
+    </div>
+  )
+}
+```
+
+</details>
+
+<details>
   <summary>useDeferredTrigger</summary>
 
 A hook for debouncing a changing boolean value, with different delays depending on the direction of the trigger (determined by the base value).
@@ -152,33 +179,6 @@ const MyComponent = () => {
 </details>
 
 <details>
-  <summary>useClickOutside</summary>
-
-A hook that fires a callback when a click (pointerdown) was registered outside of a component. Outside is defined as outside of your react tree, which means that this works with portals.
-
-```tsx
-import { useDraggable } from 'react-hooks-shareable'
-
-const MyComponent = () => {
-  const handler = useClickOutside(e => {
-    console.log('Clicked outside!')
-  })
-
-  return (
-    <div onPointerDown={handler}>
-      <span>Clicks here is inside</span>
-      {ReactDOM.createPortal(
-        <span>Clicks here are also inside</span>,
-        portalContainer
-      )}
-    </div>
-  )
-}
-```
-
-</details>
-
-<details>
   <summary>useFocusDetection</summary>
 
 A hook which detects if the browser and your page is in focus.
@@ -190,6 +190,24 @@ const MyComponent = () => {
   const hasFocus = useFocusDetection(1000)
 
   return <span>{`User ${hasFocus ? : 'is' : 'is not'} focusing on this page`}</span>
+}
+```
+
+</details>
+
+<details>
+  <summary>useHasOverflow</summary>
+
+A hook for checking if an element has overflow.
+
+```tsx
+import { useHasOverflow } from 'react-hooks-shareable'
+import { SomeComponent } from 'someComponentLibrary'
+
+const MyComponent = () => {
+  const { hasOverflow, ref } = useHasOverflow()
+
+  return <SomeComponent ref={ref} hasOverflow={hasOverflow} />
 }
 ```
 
@@ -398,6 +416,37 @@ const MyComponent = () => {
 </details>
 
 <details>
+  <summary>useSynchronizedAnimation</summary>
+
+A hook for synchronizing web animations. The animations are synchronized to
+the `document.timeline`. This can for example be used to make spinners
+always be in sync with another, and over remounts.
+
+```css
+.animation {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+```
+
+```tsx
+import { useSynchronizedAnimation } from 'react-hooks-shareable'
+
+const MyAnimation = () => {
+  const ref = useSynchronizedAnimation()
+
+  return <div className="animation" ref={ref} />
+}
+```
+
+</details>
+
+<details>
   <summary>useTrigger</summary>
 
 A hook implementing a generic event.
@@ -490,24 +539,6 @@ const MyComponent = () => {
       Content
     </Button>
   )
-}
-```
-
-</details>
-
-<details>
-  <summary>useHasOverflow</summary>
-
-A hook for checking if an element has overflow.
-
-```tsx
-import { useHasOverflow } from 'react-hooks-shareable'
-import { SomeComponent } from 'someComponentLibrary'
-
-const MyComponent = () => {
-  const { hasOverflow, ref } = useHasOverflow()
-
-  return <SomeComponent ref={ref} hasOverflow={hasOverflow} />
 }
 ```
 
