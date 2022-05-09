@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
-## [v1.49.0](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.48.0...v1.49.0) (2022-04-04 09:10:46 +0200)
+## [v1.50.0](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.49.0...v1.50.0) (2022-05-09 11:54:38 +0200)
+
+### Maintenance
+
+  - include `jest-environment-jsdom` as dev dependency ([e19e905](https://github.com/AxisCommunications/react-hooks-shareable/commit/e19e905262cdb3d4d6893455b9fcb8e78dc22dc8))
+  - update dependencies ([fac6d36](https://github.com/AxisCommunications/react-hooks-shareable/commit/fac6d36810d6bc0b7d9cb061467562175cb38ad6))
+
+### Features
+
+  - add useSynchronizedAnimation hook (#15) ([2100990](https://github.com/AxisCommunications/react-hooks-shareable/commit/2100990f7b686ede676dbb02df6ef18fb9086030))
+
+## [v1.49.0](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.48.0...v1.49.0) (2022-04-04 09:11:43 +0200)
 
 ### Maintenance
 
