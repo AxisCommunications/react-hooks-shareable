@@ -1,14 +1,20 @@
-import { renderHook } from '@testing-library/react-hooks'
-import { it, expect } from '@jest/globals'
+import { renderHook, waitFor } from '@testing-library/react'
+import { expect, test } from '@jest/globals'
 
 import { useDeferredTrigger } from './useDeferredTrigger'
 
-const DEFAULT_DELAY = 13
-const DEFAULT_TRAILING_DELAY = 26
-const TOLERANCE = 5
+const DEFAULT_DELAY = 50
+const DEFAULT_TRAILING_DELAY = 100
+const TOLERANCE = 25
 
-it('shall turn on the deferred flag after delay', async () => {
-  const { result, rerender, waitForNextUpdate } = renderHook(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+;(globalThis as any).IS_REACT_ACT_ENVIRONMENT = true
+
+const wait = async (ms: number) =>
+  new Promise(resolve => setTimeout(resolve, ms))
+
+test('shall turn on the deferred flag after delay', async () => {
+  const { result, rerender } = renderHook(
     value => useDeferredTrigger(value, { delay: DEFAULT_DELAY }),
     { initialProps: false }
   )
@@ -16,12 +22,13 @@ it('shall turn on the deferred flag after delay', async () => {
   expect(result.current).toBe(false)
   rerender(true)
   expect(result.current).toBe(false)
-  await waitForNextUpdate()
-  expect(result.current).toBe(true)
+  await waitFor(() => {
+    expect(result.current).toBe(true)
+  })
 })
 
-it('shall not turn on the deferred flag when reset before delay', async () => {
-  const { result, rerender, waitForNextUpdate } = renderHook(
+test('shall not turn on the deferred flag when reset before delay', async () => {
+  const { result, rerender } = renderHook(
     value => useDeferredTrigger(value, { delay: DEFAULT_DELAY }),
     { initialProps: false }
   )
@@ -30,16 +37,16 @@ it('shall not turn on the deferred flag when reset before delay', async () => {
   expect(result.current).toBe(false)
 
   // Reset before it's time
-  setTimeout(() => {
-    rerender(false)
-  }, DEFAULT_DELAY - TOLERANCE)
+  await wait(DEFAULT_DELAY - TOLERANCE)
+  rerender(false)
 
-  await waitForNextUpdate()
-  expect(result.current).toBe(false)
+  await waitFor(() => {
+    expect(result.current).toBe(false)
+  })
 })
 
-it('shall wait to turn on the deferred value till after the delay', async () => {
-  const { result, rerender, waitForNextUpdate } = renderHook(
+test('shall wait to turn on the deferred value till after the delay', async () => {
+  const { result, rerender } = renderHook(
     value => useDeferredTrigger(value, { delay: DEFAULT_DELAY }),
     { initialProps: false }
   )
@@ -48,12 +55,13 @@ it('shall wait to turn on the deferred value till after the delay', async () => 
   expect(result.current).toBe(false)
 
   // Wait for delay to pass
-  await waitForNextUpdate()
-  expect(result.current).toBe(true)
+  await waitFor(() => {
+    expect(result.current).toBe(true)
+  })
 })
 
-it('shall wait to turn off the deferred value till after the delay', async () => {
-  const { result, rerender, waitForNextUpdate } = renderHook(
+test('shall wait to turn off the deferred value till after the delay', async () => {
+  const { result, rerender } = renderHook(
     value =>
       useDeferredTrigger(value, {
         delay: DEFAULT_DELAY,
@@ -66,14 +74,16 @@ it('shall wait to turn off the deferred value till after the delay', async () =>
   expect(result.current).toBe(false)
 
   // Wait for delay to pass
-  await waitForNextUpdate()
-  expect(result.current).toBe(true)
+  await waitFor(() => {
+    expect(result.current).toBe(true)
+  })
 
   // Turn off trigger
   rerender(false)
   expect(result.current).toBe(true)
 
   // Wait for delay to pass
-  await waitForNextUpdate()
-  expect(result.current).toBe(false)
+  await waitFor(() => {
+    expect(result.current).toBe(false)
+  })
 })
