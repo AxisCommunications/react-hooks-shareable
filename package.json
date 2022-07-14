@@ -20,11 +20,12 @@
     "lint": "yarn tsc && yarn lint:ts && yarn prettier:check",
     "lint:fix": "yarn lint:ts --fix && yarn prettier:fix",
     "lint:ts": "eslint --ext '.ts,.tsx' . --cache",
+    "commitlint": "sbin/commitlint.py",
     "test": "jest",
     "prettier:check": "prettier -c -u .",
     "prettier:fix": "prettier -c -u -w .",
     "build": "yarn tsc --emitDeclarationOnly --noEmit false && webpack --config webpack.config.js",
-    "release": "yarn version apply && bash sbin/release.sh"
+    "release": "sbin/release.py"
   },
   "devDependencies": {
     "@babel/core": "7.18.6",
