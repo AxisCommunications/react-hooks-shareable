@@ -16,3 +16,8 @@ dist/
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
