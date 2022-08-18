@@ -1,8 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.51.1](https://github.com/AxisCommunications/react-hooks-shareable/releases/tag/v1.51.1)
+2022-08-18 14:49:39 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.51.0...v1.51.1)
+
+### 🐛 Bug fixes
+
+  -  current ref can be null ([`b357263`](https://github.com/AxisCommunications/react-hooks-shareable/commit/b357263e2895766db6b515286c22dd29ebc70620)) ([**@steabert**](https://github.com/steabert))
+  - [!13](https://github.com/AxisCommunications/react-hooks-shareable/pull/13) -  useLocalStorage return type (#13) ([`5719a08`](https://github.com/AxisCommunications/react-hooks-shareable/commit/5719a080de7c0014eb5c67492d3adb0e52b9afd4)) ([**@lekoaf**](https://github.com/lekoaf))
+
 ## [v1.51.0](https://github.com/AxisCommunications/react-hooks-shareable/releases/tag/v1.51.0)
-2022-07-18 11:38:14 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.50.1...v1.51.0)
+2022-07-18 11:42:13 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.50.1...v1.51.0)
 
 ### 🚧 Maintenance
 
