@@ -8,7 +8,7 @@ export const useSynchronizedAnimation = <E extends HTMLElement>(
     const currentTime = document.timeline?.currentTime ?? 0
     ref.current
       ?.getAnimations(options)
-      .forEach(a => (a.currentTime = currentTime))
+      ?.forEach(a => (a.currentTime = currentTime))
   }, [options])
   return ref
 }
