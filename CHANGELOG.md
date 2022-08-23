@@ -1,8 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.51.2](https://github.com/AxisCommunications/react-hooks-shareable/releases/tag/v1.51.2)
+2022-08-23 10:09:56 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.51.1...v1.51.2)
+
+### 🐛 Bug fixes
+
+  - [!19](https://github.com/AxisCommunications/react-hooks-shareable/pull/19) -  clear old timers in useDeferredTrigger (#19) ([`ee98aaa`](https://github.com/AxisCommunications/react-hooks-shareable/commit/ee98aaaf7f96c4be422d0a3a42e03fcd8a7e0558)) ([**@steabert**](https://github.com/steabert))
+
 ## [v1.51.1](https://github.com/AxisCommunications/react-hooks-shareable/releases/tag/v1.51.1)
-2022-08-18 14:49:39 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.51.0...v1.51.1)
+2022-08-18 14:56:15 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.51.0...v1.51.1)
 
 ### 🐛 Bug fixes
 
