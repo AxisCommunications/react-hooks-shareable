@@ -1,8 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.51.3](https://github.com/AxisCommunications/react-hooks-shareable/releases/tag/v1.51.3)
+2022-08-23 10:42:30 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.51.2...v1.51.3)
+
+### 🐛 Bug fixes
+
+  - [!20](https://github.com/AxisCommunications/react-hooks-shareable/pull/20) -  remove window from timeout methods (#20) ([`edc6aeb`](https://github.com/AxisCommunications/react-hooks-shareable/commit/edc6aeb6a41e663fc5af542064b0c1bd15143d30)) ([**@steabert**](https://github.com/steabert))
+
 ## [v1.51.2](https://github.com/AxisCommunications/react-hooks-shareable/releases/tag/v1.51.2)
-2022-08-23 10:09:56 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.51.1...v1.51.2)
+2022-08-23 10:12:45 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.51.1...v1.51.2)
 
 ### 🐛 Bug fixes
 
