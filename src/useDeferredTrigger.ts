@@ -75,6 +75,7 @@ export const useDeferredTrigger = (
           // We need to wait at least a certain amount of time before
           // applying the delay. This can always be canceled by an update
           // that re-triggers this effect (as the timeout can be cleared).
+          clearTimeout(timeoutRef.current)
           timeoutRef.current = window.setTimeout(toggleFlag, scheduledDelay)
         }
       }
