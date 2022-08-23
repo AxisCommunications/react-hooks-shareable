@@ -42,7 +42,7 @@ export const useDeferredTrigger = (
   { delay = 100, minDuration = 400, base = false }: IDeferredTriggerOptions = {}
 ) => {
   const [deferredFlag, setDeferredFlag] = useState(base)
-  const timeoutRef = useRef<number>()
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>()
   const lastActive = useRef<number>()
 
   useEffect(() => {
@@ -75,15 +75,16 @@ export const useDeferredTrigger = (
           // We need to wait at least a certain amount of time before
           // applying the delay. This can always be canceled by an update
           // that re-triggers this effect (as the timeout can be cleared).
-          clearTimeout(timeoutRef.current)
-          timeoutRef.current = window.setTimeout(toggleFlag, scheduledDelay)
+          timeoutRef.current = setTimeout(toggleFlag, scheduledDelay)
         }
       }
     } else {
       // The target flag matches the deferred flag,
       // so clear any scheduled changes to it.
-      clearTimeout(timeoutRef.current)
-      timeoutRef.current = undefined
+      if (timeoutRef.current !== undefined) {
+        clearTimeout(timeoutRef.current)
+        timeoutRef.current = undefined
+      }
     }
   }, [flag, deferredFlag, base, delay, minDuration])
 
