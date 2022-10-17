@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
 import argparse
-import re
-import subprocess
 import sys
 
 import utils
@@ -114,6 +112,7 @@ def changelog_part(commitish_to: str, commitish_from: str, version: str):
 HEADER = """
 # Changelog
 All notable changes to this project will be documented in this file.
+
 """
 
 
@@ -129,6 +128,14 @@ if __name__ == "__main__":
         help="Don't include a changelog header",
     )
 
+    parser.add_argument(
+        "-r",
+        "--release",
+        type=str,
+        metavar="RELEASE",
+        help="New release tag (e.g. vX.Y.Z), includes full changelog with a new entry for things not tagged",
+    )
+
     subparsers = parser.add_subparsers(
         dest="type", metavar="COMMAND", help='One of "single" or "full".', required=True
     )
@@ -140,13 +147,6 @@ if __name__ == "__main__":
 
     full = subparsers.add_parser(
         "full", description="Generate a changelog covering entire history."
-    )
-    full.add_argument(
-        "-r",
-        "--release",
-        type=str,
-        metavar="RELEASE",
-        help="New release tag (e.g. vX.Y.Z), includes full changelog with a new entry for things not tagged",
     )
 
     args = parser.parse_args()
@@ -164,6 +164,10 @@ if __name__ == "__main__":
         ]
     ).split()
 
+    if args.release is not None:
+        tags.insert(0, "HEAD")
+    tags.append(None)
+
     if args.type == "single":
         if args.tag is None:
             try:
@@ -175,24 +179,19 @@ if __name__ == "__main__":
             print(f"Error: tag {args.tag} not found!")
             sys.exit(1)
 
-    if args.type == "full" and args.release is not None:
-        tags.insert(0, "HEAD")
-    tags.append(None)
-
-    content = [HEADER] if not args.skip_header else []
+    if not args.skip_header:
+        sys.stdout.write(HEADER)
 
     for commitish_to, commitish_from in zip(tags[:-1], tags[1:]):
         if args.type == "single" and args.tag != commitish_to:
             continue
-
-        content.append(
+        sys.stdout.write(
             changelog_part(
                 commitish_to,
                 commitish_from,
                 args.release if commitish_to == "HEAD" else commitish_to,
             )
         )
-        content.append("")
+        sys.stdout.write("\n\n")
 
-    sys.stdout.write("\n".join(content))
     sys.stdout.close()
