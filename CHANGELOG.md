@@ -1,7 +1,17 @@
+
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [v1.51.3](https://github.com/AxisCommunications/react-hooks-shareable/releases/tag/v1.51.3)
+## [v1.52.0](https://github.com/AxisCommunications/react-hooks-shareable/releases/tag/v1.52.0)
+2022-10-17 14:13:37 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.51.3...v1.52.0)
+
+### 🚧 Maintenance
+
+  -  upgrade dependencies ([`6209868`](https://github.com/AxisCommunications/react-hooks-shareable/commit/62098686443c315c7dcfdf5e12f38a5f8922a50d)) ([**@Tigge**](https://github.com/Tigge))
+  -  update release scripts ([`9d194a8`](https://github.com/AxisCommunications/react-hooks-shareable/commit/9d194a8d4ddb772385ca03f280d16cac0dc5dfc5)) ([**@Tigge**](https://github.com/Tigge))
+  -  update yarn, yarn sdks, yarn plugins ([`1d03c49`](https://github.com/AxisCommunications/react-hooks-shareable/commit/1d03c49052a5b449e57540d4cdd2f616a961b6f8)) ([**@Tigge**](https://github.com/Tigge))
+
+# [v1.51.3](https://github.com/AxisCommunications/react-hooks-shareable/releases/tag/v1.51.3)
 2022-08-23 10:42:30 +0200, [Compare changes](https://github.com/AxisCommunications/react-hooks-shareable/compare/v1.51.2...v1.51.3)
 
 ### 🐛 Bug fixes
