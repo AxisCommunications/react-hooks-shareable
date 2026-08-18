@@ -1954,10 +1954,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/gtag.js@npm:0.0.12":
-  version: 0.0.12
-  resolution: "@types/gtag.js@npm:0.0.12"
-  checksum: 34efc27fbfd0013255b8bfd4af38ded9d5a6ba761130c76f17fd3a9585d83acc88d8005aab667cfec4bdec0e7c7217f689739799a8f61aed0edb929be58b162e
+"@types/gtag.js@npm:0.0.20":
+  version: 0.0.20
+  resolution: "@types/gtag.js@npm:0.0.20"
+  checksum: 02e16dcaa64ad643e9c78bd0bd041e2b01b9ac4aea0da5bcbd226442a38c8d44f9a50bbc70d0c8219afc455e9850b6af73d4152f52f8bd61f81c8ba32efec42f
   languageName: node
   linkType: hard
 
@@ -6260,7 +6260,7 @@ __metadata:
     "@jest/globals": 29.2.0
     "@juggle/resize-observer": 3.4.0
     "@testing-library/react": 13.4.0
-    "@types/gtag.js": 0.0.12
+    "@types/gtag.js": 0.0.20
     "@types/react": 18.0.21
     "@typescript-eslint/eslint-plugin": 5.40.0
     "@typescript-eslint/parser": 5.40.0

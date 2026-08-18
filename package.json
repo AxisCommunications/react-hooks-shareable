@@ -37,7 +37,7 @@
     "@jest/globals": "29.2.0",
     "@juggle/resize-observer": "3.4.0",
     "@testing-library/react": "13.4.0",
-    "@types/gtag.js": "0.0.12",
+    "@types/gtag.js": "0.0.20",
     "@types/react": "18.0.21",
     "@typescript-eslint/eslint-plugin": "5.40.0",
     "@typescript-eslint/parser": "5.40.0",
