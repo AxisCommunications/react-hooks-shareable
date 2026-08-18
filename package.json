@@ -58,7 +58,7 @@
     "react-test-renderer": "18.2.0",
     "semver": "7.3.8",
     "typescript": "4.8.4",
-    "webpack": "5.74.0",
+    "webpack": "5.104.1",
     "webpack-cli": "4.10.0"
   },
   "peerDependencies": {
