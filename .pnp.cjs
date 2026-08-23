@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:4.6.0"],\
             ["jest", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:29.2.0"],\
             ["jest-environment-jsdom", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:29.2.0"],\
-            ["prettier", "npm:2.7.1"],\
+            ["prettier", "npm:2.8.8"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:18.2.0"],\
             ["react-test-renderer", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:18.2.0"],\
@@ -5618,7 +5618,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss-scss", null],\
             ["postcss-styled", null],\
             ["postcss-syntax", null],\
-            ["prettier", "npm:2.7.1"],\
+            ["prettier", "npm:2.8.8"],\
             ["stylelint", null],\
             ["stylelint-config-recommended", null],\
             ["stylelint-config-standard-scss", null],\
@@ -8661,10 +8661,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier", [\
-        ["npm:2.7.1", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.7.1-d1f40f5e1a-55a4409182.zip/node_modules/prettier/",\
+        ["npm:2.8.8", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.8.8-430828a36c-b49e409431.zip/node_modules/prettier/",\
           "packageDependencies": [\
-            ["prettier", "npm:2.7.1"]\
+            ["prettier", "npm:2.8.8"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8846,7 +8846,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:4.6.0"],\
             ["jest", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:29.2.0"],\
             ["jest-environment-jsdom", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:29.2.0"],\
-            ["prettier", "npm:2.7.1"],\
+            ["prettier", "npm:2.8.8"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:18.2.0"],\
             ["react-test-renderer", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:18.2.0"],\
