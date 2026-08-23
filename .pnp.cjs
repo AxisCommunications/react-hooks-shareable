@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jest/globals", "npm:29.2.0"],\
             ["@juggle/resize-observer", "npm:3.4.0"],\
             ["@testing-library/react", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:13.4.0"],\
-            ["@types/gtag.js", "npm:0.0.12"],\
+            ["@types/gtag.js", "npm:0.0.20"],\
             ["@types/react", "npm:18.0.21"],\
             ["@typescript-eslint/eslint-plugin", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:5.40.0"],\
             ["@typescript-eslint/parser", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:5.40.0"],\
@@ -3344,10 +3344,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/gtag.js", [\
-        ["npm:0.0.12", {\
-          "packageLocation": "./.yarn/cache/@types-gtag.js-npm-0.0.12-6390d727c7-34efc27fbf.zip/node_modules/@types/gtag.js/",\
+        ["npm:0.0.20", {\
+          "packageLocation": "./.yarn/cache/@types-gtag.js-npm-0.0.20-b10897fde5-02e16dcaa6.zip/node_modules/@types/gtag.js/",\
           "packageDependencies": [\
-            ["@types/gtag.js", "npm:0.0.12"]\
+            ["@types/gtag.js", "npm:0.0.20"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8831,7 +8831,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@jest/globals", "npm:29.2.0"],\
             ["@juggle/resize-observer", "npm:3.4.0"],\
             ["@testing-library/react", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:13.4.0"],\
-            ["@types/gtag.js", "npm:0.0.12"],\
+            ["@types/gtag.js", "npm:0.0.20"],\
             ["@types/react", "npm:18.0.21"],\
             ["@typescript-eslint/eslint-plugin", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:5.40.0"],\
             ["@typescript-eslint/parser", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:5.40.0"],\
