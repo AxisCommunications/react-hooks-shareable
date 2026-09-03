@@ -56,7 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:18.2.0"],\
             ["react-test-renderer", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:18.2.0"],\
-            ["semver", "npm:7.3.8"],\
+            ["semver", "npm:7.8.5"],\
             ["typescript", "patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=701156"],\
             ["webpack", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:5.104.1"],\
             ["webpack-cli", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:4.10.0"]\
@@ -8850,7 +8850,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:18.2.0"],\
             ["react-test-renderer", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:18.2.0"],\
-            ["semver", "npm:7.3.8"],\
+            ["semver", "npm:7.8.5"],\
             ["typescript", "patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=701156"],\
             ["webpack", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:5.104.1"],\
             ["webpack-cli", "virtual:093a8c139dd7de6d81c581114741bcc344be200f81ea95e06283836753d96e54926ded891a479cfb0ebe4e1a2573f0061d4934fcdcd85fb95a81b77ad125493e#npm:4.10.0"]\
@@ -9247,6 +9247,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["semver", "npm:7.3.8"],\
             ["lru-cache", "npm:6.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7.8.5", {\
+          "packageLocation": "./.yarn/cache/semver-npm-7.8.5-785968bbf9-0c580f17e8.zip/node_modules/semver/",\
+          "packageDependencies": [\
+            ["semver", "npm:7.8.5"]\
           ],\
           "linkType": "HARD"\
         }]\

@@ -56,7 +56,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-test-renderer": "18.2.0",
-    "semver": "7.3.8",
+    "semver": "7.8.5",
     "typescript": "4.8.4",
     "webpack": "5.104.1",
     "webpack-cli": "4.10.0"
